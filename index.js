@@ -44,7 +44,7 @@ embed.vimeo = function (id, opts) {
     queryString = "?" + serializeQuery(opts.query)
   }
   if (opts && opts.hasOwnProperty('classNames')){
-    var classNames = ' class=' + opts.classNames
+    var classNames = ' class="' + opts.classNames + '"'
   }else{
     var classNames = ''
   }
@@ -58,7 +58,7 @@ embed.youtube = function (id, opts) {
     queryString = "?" + serializeQuery(opts.query)
   }
   if (opts && opts.hasOwnProperty('classNames')){
-    var classNames = ' class=' + opts.classNames
+    var classNames = ' class="' + opts.classNames + '"'
   }else{
     var classNames = ''
   }

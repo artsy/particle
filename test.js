@@ -46,11 +46,11 @@ test("accept query param vimeo", function (t) {
 test("accept className param youtube", function (t) {
   t.plan(1)
   var code = embed.youtube("9XeNNqeHVDw", { classNames: "no-margin fb-instant"} )
-  t.equal(code, '<iframe src="//www.youtube.com/embed/9XeNNqeHVDw?rel=0&showinfo=0" frameborder="0" allowfullscreen class="no-margin fb-instant"></iframe>')
+  t.equal(code, '<iframe src="//www.youtube.com/embed/9XeNNqeHVDw" frameborder="0" allowfullscreen class="no-margin fb-instant"></iframe>')
 })
 
 test("accept className param vimeo", function (t) {
   t.plan(1)
   var code = embed.vimeo("19339941", { classNames: "no-margin fb-instant" } )
-  t.equal(code, '<iframe src="//player.vimeo.com/video/19339941?portrait=0&color=333" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="no-margin fb-instant"></iframe>')
+  t.equal(code, '<iframe src="//player.vimeo.com/video/19339941" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="no-margin fb-instant"></iframe>')
 })

@@ -1,0 +1,26 @@
+{
+  "name": "particle",
+  "version": "1.0.0",
+  "description": "Support various kinds of embeddable content",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artsy/particle.git"
+  },
+  "keywords": [
+    "embed",
+    "video"
+  ],
+  "author": "Kana Abe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artsy/particle/issues"
+  },
+  "homepage": "https://github.com/artsy/particle#readme",
+  "dependencies": {
+    "tape": "^4.5.1"
+  }
+}
