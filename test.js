@@ -66,3 +66,15 @@ test("accept protocol param vimeo", function (t) {
   var code = embed.vimeo("19339941", { protocol: "http:" } )
   t.equal(code, '<iframe src="http://player.vimeo.com/video/19339941" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>')
 })
+
+test("accept no protocol param", function (t) {
+  t.plan(1)
+  var code = embed.youtube("9XeNNqeHVDw" )
+  t.equal(code, '<iframe src="//www.youtube.com/embed/9XeNNqeHVDw" frameborder="0" allowfullscreen></iframe>')
+})
+
+test("accepts multiple options", function (t) {
+  t.plan(1)
+  var code = embed.youtube("9XeNNqeHVDw", { protocol: 'https:', classNames: 'no-margin' } )
+  t.equal(code, '<iframe src="https://www.youtube.com/embed/9XeNNqeHVDw" frameborder="0" allowfullscreen class="no-margin"></iframe>')
+})
