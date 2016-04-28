@@ -48,7 +48,12 @@ embed.vimeo = function (id, opts) {
   }else{
     var classNames = ''
   }
-  return '<iframe src="//player.vimeo.com/video/' + id + queryString + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen' + classNames + '></iframe>'
+  if (opts && opts.hasOwnProperty('protocol')){
+    var protocol = opts.protocol
+  }else{
+    var protocol = ''
+  }
+  return '<iframe src="' + protocol + '//player.vimeo.com/video/' + id + queryString + '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen' + classNames + '></iframe>'
 }
 
 embed.youtube = function (id, opts) {
@@ -62,7 +67,12 @@ embed.youtube = function (id, opts) {
   }else{
     var classNames = ''
   }
-  return '<iframe src="//www.youtube.com/embed/' + id + queryString + '" frameborder="0" allowfullscreen' + classNames + '></iframe>'
+  if (opts && opts.hasOwnProperty('protocol')){
+    var protocol = opts.protocol
+  }else{
+    var protocol = ''
+  }
+  return '<iframe src="' + protocol + '//www.youtube.com/embed/' + id + queryString + '" frameborder="0" allowfullscreen' + classNames + '></iframe>'
 }
 
 embed.youtube.image = function (id, opts) {
