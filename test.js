@@ -54,3 +54,15 @@ test("accept className param vimeo", function (t) {
   var code = embed.vimeo("19339941", { classNames: "no-margin fb-instant" } )
   t.equal(code, '<iframe src="//player.vimeo.com/video/19339941" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="no-margin fb-instant"></iframe>')
 })
+
+test("accept protocol param youtube", function (t) {
+  t.plan(1)
+  var code = embed.youtube("9XeNNqeHVDw", { protocol: "http:" } )
+  t.equal(code, '<iframe src="http://www.youtube.com/embed/9XeNNqeHVDw" frameborder="0" allowfullscreen></iframe>')
+})
+
+test("accept protocol param vimeo", function (t) {
+  t.plan(1)
+  var code = embed.vimeo("19339941", { protocol: "http:" } )
+  t.equal(code, '<iframe src="http://player.vimeo.com/video/19339941" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>')
+})
