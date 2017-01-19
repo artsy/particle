@@ -12,6 +12,13 @@ function embed (url, opts) {
   if (id) return embed.vimeo(id, opts)
 }
 
+embed.getId = function (url) {
+  var id
+  url = URL.parse(url, true)
+  if (id = detectYoutube(url)) return id
+  if (id = detectVimeo(url)) return id
+}
+
 embed.image = function (url, opts) {
   var id
 

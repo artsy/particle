@@ -42,3 +42,11 @@ Output:
 ```html
 <iframe src="//www.youtube.com/embed/vq9pQi-SD1k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="no-margin"></iframe>
 ```
+
+Just get the video id and type
+```coffeescript
+particle = require 'particle'
+id = particle.getId('https://www.youtube.com/watch?v=vq9pQi-SD1k')
+id -> vq9pQi-SD1k
+
+```

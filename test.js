@@ -78,3 +78,15 @@ test("accepts multiple options", function (t) {
   var code = embed.youtube("9XeNNqeHVDw", { protocol: 'https:', classNames: 'no-margin' } )
   t.equal(code, '<iframe src="https://www.youtube.com/embed/9XeNNqeHVDw" frameborder="0" allowfullscreen class="no-margin"></iframe>')
 })
+
+test("can getId on vimeo link", function (t) {
+  t.plan(1)
+  var code = embed.getId("https://vimeo.com/167105431")
+  t.equal(code, '167105431')
+})
+
+test("can getId on youtube link", function (t) {
+  t.plan(1)
+  var code = embed.getId("https://www.youtube.com/watch?v=twE64AuqE9A")
+  t.equal(code, 'twE64AuqE9A')
+})
