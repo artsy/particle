@@ -42,3 +42,12 @@ Output:
 ```html
 <iframe src="//www.youtube.com/embed/vq9pQi-SD1k" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="no-margin"></iframe>
 ```
+
+Just get the video id and type
+```coffeescript
+particle = require 'particle'
+id = particle 'https://www.youtube.com/watch?v=vq9pQi-SD1k', videoId: true
+
+```
+
+Note that in the case where you pass `videoId: true` and `class: 'no-margin'`, `videoId` will override all iframe requests.
