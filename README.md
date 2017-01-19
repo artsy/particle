@@ -46,8 +46,7 @@ Output:
 Just get the video id and type
 ```coffeescript
 particle = require 'particle'
-id = particle 'https://www.youtube.com/watch?v=vq9pQi-SD1k', videoId: true
+id = particle.getId('https://www.youtube.com/watch?v=vq9pQi-SD1k')
+id -> vq9pQi-SD1k
 
 ```
-
-Note that in the case where you pass `videoId: true` and `class: 'no-margin'`, `videoId` will override all iframe requests.
